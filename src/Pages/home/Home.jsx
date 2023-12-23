@@ -1,10 +1,14 @@
-import React from 'react'
-import Button from '../../components/Button/Boton'
+import React from "react";
+import Header from "../../components/Nav/Header";
+import Hero from "../../components/hero/Hero";
 
 const Home = () => {
   return (
-    <div> <Button/>Home</div>
-  )
-}
+    <div>
+      <Header />
+      <Hero />
+    </div>
+  );
+};
 
-export default Home
+export default Home;

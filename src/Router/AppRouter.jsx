@@ -11,11 +11,11 @@ function AppRouter() {
     <BrowserRouter>
       <Routes>
         <Route path="/">
-          <Route element={<PublicRoutes isAuthenticate={true} />}>
+          <Route element={<PublicRoutes isAuthenticate={false} />}>
             <Route path="Register" element={<Register />} />
             <Route path="Login" element={<Login />} />
           </Route>
-          <Route element={<PrivatedRoutes isAuthenticate={true} />}>
+          <Route element={<PrivatedRoutes isAuthenticate={false} />}>
             <Route path="Home" element={<Home />} />
             <Route index element={<Home />} />
           </Route>

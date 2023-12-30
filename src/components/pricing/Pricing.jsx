@@ -7,16 +7,16 @@ function Pricing() {
     <div className="Pricing">
       <div className="contanine">
         <div className="text">
-          <p>Si te gusta nuestro contenido</p>
-          <p> ¡Apóyanos!</p>
+          <p>Si te gusta nuestro contenido ¡Apóyanos! </p>
+
           <h3 className="text-subtitulo">
             Nuestra plataforma nos permite por medio de donaciones <br />
             ayudar y gestionar recursos para expandir nuestra comunidad e
-            igualmente <br /> apoyar fundaciones con fines eudcativos.
+            igualmente <br /> apoyar fundaciones con fines educativos.
           </h3>
         </div>
-        <DonationsContainer />
       </div>
+      <DonationsContainer />
     </div>
   );
 }

@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss"; // Importa tu archivo SCSS
 
 const Header = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="header">
-      <div className="brand">Tu Marca</div>
+      <div className="brand">Learning Time</div>
 
-      <nav className="header-nav">
+      <div
+        className={`hamburger-menu ${isMenuOpen ? "open" : ""}`}
+        onClick={toggleMenu}
+      >
+        &#9776;
+      </div>
+
+      <nav className={`header-nav ${isMenuOpen ? "open" : ""}`}>
         <a href="/" className="nav-link">
           Inicio
         </a>
@@ -19,8 +32,6 @@ const Header = () => {
         <a href="/contact" className="nav-link">
           Contacto
         </a>
-        <div className="line"></div>
-        <div className="profile"></div>
       </nav>
     </header>
   );

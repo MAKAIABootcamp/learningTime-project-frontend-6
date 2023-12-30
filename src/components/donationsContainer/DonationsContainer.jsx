@@ -27,7 +27,6 @@ const DonationsContainer = () => {
         "Desarrollo de contenido educativo",
       ],
     },
-    // Puedes agregar más objetos de datos para cada donación
   ];
 
   return (

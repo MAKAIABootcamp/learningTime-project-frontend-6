@@ -5,7 +5,8 @@ import Register from "../Pages/Register/Register";
 import Home from "../Pages/home/Home";
 import PublicRoutes from "./PublicRoutes";
 import PrivatedRoutes from "./PrivatedRoutes";
-import  Cursos  from "../Pages/cursos/Cursos";
+import Cursos from "../Pages/cursos/Cursos";
+import Class from "../Pages/classs/Class";
 
 function AppRouter() {
   return (
@@ -20,6 +21,7 @@ function AppRouter() {
             <Route path="Home" element={<Home />} />
             <Route index element={<Home />} />
             <Route path="Cursos" element={<Cursos />} />
+            <Route path="Class" element={<Class />} />
           </Route>
         </Route>
       </Routes>

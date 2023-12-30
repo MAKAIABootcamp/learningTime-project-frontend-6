@@ -1,22 +1,24 @@
-// FooterComponent.scss
-
 .footer {
   display: flex;
-  padding: 10px;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
   gap: 10px;
   align-self: stretch;
   background: var(--PrimaryColor, #029b94);
+  width: 100%;
+  padding: 0, 10%;
 
-  .container {
+  .containerFooter {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
     flex: 1 0 0;
+    width: 100%;
 
     .text {
+      width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -24,7 +26,9 @@
 
       .texto1 {
         display: flex;
-        width: 269px;
+        width: 100%;
+        text-align: center;
+
         height: 60px;
         flex-direction: column;
         justify-content: center;
@@ -36,6 +40,7 @@
         line-height: normal;
       }
       .texto2 {
+        width: 100%;
         color: #fff;
         text-align: center;
 
@@ -69,12 +74,15 @@
       line-height: normal;
     }
 
-    .contactos {
+    .cont {
       display: flex;
-      justify-content: center;
+      width: 100%;
+
+      justify-content: space-between;
       align-items: center;
-      gap: 600px;
+
       align-self: stretch;
+      margin-bottom: 40px;
 
       .texto {
         width: 167px;
@@ -105,6 +113,60 @@
           font-style: normal;
           font-weight: 700;
           line-height: normal;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    .containerFooter {
+      padding: 0px;
+      margin: 0px;
+      .text {
+        padding: 0, 10%;
+        display: flex;
+        flex-direction: column;
+
+        .texto1 {
+          margin-top: 40px;
+
+          text-align: start;
+        }
+        .texto2 {
+          color: #fff;
+          text-align: start;
+        }
+      }
+
+      .cont {
+        padding: 0%;
+
+        .texto {
+          margin-left: 20px;
+        }
+
+        .redes {
+          width: 212px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          .redes-icon {
+            width: 28px;
+            height: 28px;
+            color: #fff;
+          }
+
+          .texto {
+            color: #fff;
+            font-family: "Sora";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
         }
       }
     }

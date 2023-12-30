@@ -12,7 +12,7 @@ const CardDonation = ({ title, description, items }) => {
 
       <div className="amount">
         <div className="amount-text">
-          <p>Ingresa tu valor</p>
+          <p className="amount-P">Ingresa tu valor</p>
           <p className="donation-description">{description}</p>
         </div>
 

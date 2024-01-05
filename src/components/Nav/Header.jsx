@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Header.scss"; // Importa tu archivo SCSS
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -20,18 +21,19 @@ const Header = () => {
       </div>
 
       <nav className={`header-nav ${isMenuOpen ? "open" : ""}`}>
-        <a href="/" className="nav-link">
+        <Link to="/Home" className="nav-link">
           Inicio
-        </a>
-        <a href="/about" className="nav-link">
+        </Link>
+
+        <Link to="/Home" className="nav-link">
           Quiénes Somos
-        </a>
-        <a href="/courses" className="nav-link">
+        </Link>
+        <Link to="/Cursos" className="nav-link">
           Cursos
-        </a>
-        <a href="/contact" className="nav-link">
+        </Link>
+        <Link to="/" className="nav-link">
           Contacto
-        </a>
+        </Link>
       </nav>
     </header>
   );

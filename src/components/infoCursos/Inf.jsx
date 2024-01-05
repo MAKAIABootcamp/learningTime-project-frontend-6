@@ -2,11 +2,11 @@
 import "./Inf.scss";
 import Text from "./text";
 
-const inf = () => {
+const Inf = () => {
   return (
     <div className="infCursos">
       <span>Nuestros cursos</span>
     </div>
   );
-}
-export default inf;
+};
+export default Inf;

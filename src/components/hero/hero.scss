@@ -69,6 +69,10 @@
             font-weight: 600;
             line-height: normal;
           }
+          .link-Hero {
+            text-decoration: none;
+            color: #fff;
+          }
         }
         .link {
           display: flex;
@@ -79,6 +83,10 @@
             margin-top: 15px;
             font-size: 26px;
             color: #029b94;
+            .link-parrafo {
+              text-decoration: none;
+              color: #029b94;
+            }
           }
           .icon {
             text-align: center;

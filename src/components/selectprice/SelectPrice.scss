@@ -1,0 +1,67 @@
+.donar {
+  width: 516px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  .actions {
+    width: 283px;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    .button {
+      border: none;
+      padding: 12px 16px;
+      border-radius: 25px;
+      background: transparent;
+      color: #029b94;
+      transition: background 0.3s, color 0.3s;
+
+      &:hover {
+        background: #ffffff;
+        color: #029b94;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &.active {
+        background: #fff;
+        color: #029b94;
+      }
+    }
+  }
+
+  .buttons {
+    width: 514px;
+    height: 100px; /* Cambiado de auto a un valor fijo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    .WhiteButton {
+      color: #029b94;
+      background: #ffffff;
+      border: none;
+      padding: 10px;
+      border-radius: 15px;
+    }
+
+    .TealButton {
+      color: #ffffff;
+      background: #029b94;
+      border: none;
+      padding: 10px;
+      border-radius: 15px;
+    }
+  }
+}

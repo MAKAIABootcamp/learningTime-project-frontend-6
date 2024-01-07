@@ -25,13 +25,13 @@ const Header = () => {
           Inicio
         </Link>
 
-        <Link to="/About" className="nav-link">
-          Quiénes Somos
-        </Link>
         <Link to="/Cursos" className="nav-link">
           Cursos
         </Link>
-        <Link to="/" className="nav-link">
+        <Link to="/About" className="nav-link">
+          Acerca de
+        </Link>
+        <Link to="/Contact" className="nav-link">
           Contacto
         </Link>
       </nav>

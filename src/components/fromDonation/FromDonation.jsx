@@ -2,6 +2,7 @@ import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./FromDonation.scss";
+import { Link } from "react-router-dom";
 
 function FromDonation() {
   return (
@@ -42,19 +43,20 @@ function FromDonation() {
           <option value="2">Dólar estadounidense</option>
         </Form.Select>
       </Form.Group>
-
-      <Button
-        variant="primary"
-        type="submit"
-        style={{
-          borderRadius: "20px",
-          backgroundColor: "#ffffff",
-          color: "#029B94",
-          border: "2px solid #ffffff",
-        }}
-      >
-        Enviar Donación
-      </Button>
+      <Link to="/Contact">
+        <Button
+          variant="primary"
+          type="submit"
+          style={{
+            borderRadius: "20px",
+            backgroundColor: "#ffffff",
+            color: "#029B94",
+            border: "2px solid #ffffff",
+          }}
+        >
+          Enviar Donación
+        </Button>
+      </Link>
     </Form>
   );
 }

@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 import Cursos from "../Pages/cursos/Cursos";
 import Class from "../Pages/classs/Class";
 import About from "../Pages/about/About";
+import Contact from "../Pages/contact/contact";
 
 function AppRouter() {
   const { isAuthenticate } = useSelector((store) => store.user);
@@ -25,6 +26,7 @@ function AppRouter() {
             <Route path="Cursos" element={<Cursos />} />
             <Route path="Class" element={<Class />} />
             <Route path="About" element={<About />} />
+            <Route path="Contact" element={<Contact />} />
             <Route index element={<Home />} />
           </Route>
         </Route>

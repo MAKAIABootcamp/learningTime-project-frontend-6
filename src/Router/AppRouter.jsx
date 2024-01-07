@@ -8,6 +8,7 @@ import PrivatedRoutes from "./PrivatedRoutes";
 import { useSelector } from "react-redux";
 import Cursos from "../Pages/cursos/Cursos";
 import Class from "../Pages/classs/Class";
+import About from "../Pages/about/About";
 
 function AppRouter() {
   const { isAuthenticate } = useSelector((store) => store.user);
@@ -23,6 +24,7 @@ function AppRouter() {
             <Route path="Home" element={<Home />} />
             <Route path="Cursos" element={<Cursos />} />
             <Route path="Class" element={<Class />} />
+            <Route path="About" element={<About />} />
             <Route index element={<Home />} />
           </Route>
         </Route>

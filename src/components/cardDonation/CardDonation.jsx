@@ -2,6 +2,7 @@
 import React from "react";
 import "./CardDonation.scss";
 import { FaCircleCheck } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const CardDonation = ({ title, description, items }) => {
   return (
@@ -17,7 +18,9 @@ const CardDonation = ({ title, description, items }) => {
         </div>
 
         <div className="button">
-          <button>Donar</button>
+          <Link to="/About">
+            <button>Donar</button>
+          </Link>
         </div>
       </div>
 

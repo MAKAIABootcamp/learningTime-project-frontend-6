@@ -1,18 +1,25 @@
 import React from 'react'
-
+import './About.scss'
 
 const About = () => {
   return (
-    <div>
-        <span>Quiénes somos?</span>
-        <span>Historia</span>
+    <div className='About'>
+        <span>¿Quiénes somos?</span>
+        <span>HISTORIA</span>
         <p>Learning time fue creado en el año 2023 en la ciudad de Medellín por iniciativa de un grupo de líderes Makaia la cual se materializó inicialmente como una organización de estudios. Dicho propósito busca satisfacer las necesidades evidenciadas en los estudiantes, así fue como se formuló un proyecto educativo institucional, con el cuál nació LEARNING TIME, se inicia para ofrecer los siguientes cursos:</p>
-<ul>•	Gestión del tiempo
-<li>Nutrición y salud</li>	
-<li>Salud mental</li>
-<li>Inteligencia emocional</li>
-<li>Educación financiera</li>
-<li>Programación y desarrollo web</li>
+<ul>	
+  <span>SALUD MENTAL:</span>
+  <li>Introducción a la mente poositiva</li>
+  <li>Gestión del Estres y bienestar emocional</li>
+  <li>Mindfulness y Reducción de Estrés (MBSR)</li>
+  <span>UNA VIDA SANA:</span>
+  <li>Functional Fitness</li>
+  <li>Entrenamiento de Flexibilidad  y Movilidad</li>
+  <li>Calistenia</li>
+  <span>FINANZAS:</span>
+  <li>Finanzas Personales</li>
+  <li>Estrategias para el Exito Financiero</li>
+  <li>Libertad Financiera</li>
 </ul>
 <p>Los estudiantes, como principal público, encontrarán en nuestra aplicación un amplio contenido especialmente diseñado para su beneficio.
 Nuestro enfoque se centra en brindar soluciones para aquellos que buscan superar obstáculos y mejorar su bienestar en su viaje educativo y personal.</p>

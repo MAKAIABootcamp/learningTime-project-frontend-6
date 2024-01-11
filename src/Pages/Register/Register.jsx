@@ -12,10 +12,17 @@ import { createAnAccountAsync } from "../../store/users/userActions";
 function Register() {
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
+
   const handleRegister = async (data) => {
     const photoURL = await uploadFile(data.image[0]);
     console.log(photoURL);
-    const newUser = { ...data, photoURL };
+    const newUser = {
+      ...data,
+      photoURL,
+      name: data.name,
+      email: data.email,
+      password: data.password,
+    };
     dispatch(createAnAccountAsync(newUser));
   };
   return (

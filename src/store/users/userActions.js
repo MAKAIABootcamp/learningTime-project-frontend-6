@@ -4,10 +4,12 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   signInWithEmailAndPassword,
+  signOut,
 } from "firebase/auth";
 import { setError, setIsAuthenticate, setUser } from "./userSlice";
 
 import { auth } from "../../firebase/firebaseConfig";
+import { createUserInCollection } from "../../services/userServices";
 
 export const createAnAccountAsync = (newUser) => async (dispatch) => {
   try {
@@ -21,9 +23,13 @@ export const createAnAccountAsync = (newUser) => async (dispatch) => {
       photoURL: newUser.photoURL,
     });
     console.log(user);
-    {
-      /*Disparamos el setUser para actualizar */
-    }
+    const userLogged = await createUserInCollection(user.uid, {
+      name: newUser.name,
+      email: newUser.email,
+      photoURL: newUser.photoURL,
+      accessToken: user.accessToken,
+    });
+
     dispatch(
       setUser({
         id: user.uid,
@@ -57,6 +63,19 @@ export const loginGoogle = () => {
       );
     }
   };
+};
+
+export const logoutAsync = () => async (dispatch) => {
+  try {
+    await signOut(auth);
+    dispatch(setIsAuthenticate(false));
+    dispatch(setUser(null));
+    dispatch(setError(null));
+  } catch (error) {
+    dispatch(
+      setError({ error: true, code: error.code, message: error.message })
+    );
+  }
 };
 
 export const loginWithEmailAndPassword =

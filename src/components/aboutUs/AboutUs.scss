@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
+.About {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-family: "Lora", serif;
+  color: #029b94;
+  .containerAbout {
+    padding: 0 10%;
+  }
+}

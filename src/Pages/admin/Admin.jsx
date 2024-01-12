@@ -1,7 +1,13 @@
 import React from "react";
 
+import Header from "../../components/Nav/Header";
+
 function Admin() {
-  return <div>Admin</div>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
 
 export default Admin;

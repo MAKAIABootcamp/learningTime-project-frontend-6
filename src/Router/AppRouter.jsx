@@ -15,6 +15,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase/firebaseConfig";
 
 import Admin from "../Pages/admin/Admin";
+import Start from "../Pages/inicio/Start";
 
 function AppRouter() {
   const { isAuthenticate, user } = useSelector((store) => store.user);
@@ -45,6 +46,7 @@ function AppRouter() {
       <Routes>
         <Route path="/">
           <Route element={<PublicRoutes isAuthenticate={isAuthenticate} />}>
+            <Route path="Start" element={<Start />} />
             <Route path="Register" element={<Register />} />
             <Route path="Login" element={<Login />} />
           </Route>

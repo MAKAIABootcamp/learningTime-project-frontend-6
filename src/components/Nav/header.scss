@@ -34,6 +34,22 @@
     align-items: center;
   }
 
+  .CerrarSesión {
+    background-color: #fff;
+    color: #009a93;
+
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #009a93;
+      color: #fff;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+
   // Media query para pantallas más pequeñas (menos de 600px)
   @media only screen and (max-width: 600px) {
     .profile,

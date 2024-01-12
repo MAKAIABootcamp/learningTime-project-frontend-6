@@ -3,7 +3,7 @@ import "./Header.scss";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutAsync } from "../../store/users/userActions";
-import { Button } from "react-bootstrap";
+import Button from "../Button/Button";
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -32,25 +32,27 @@ const Header = () => {
 
       <nav className={`header-nav ${isMenuOpen ? "open" : ""}`}>
         <Link to="/Home">
-          <button className="linkButton"> Inicio</button>
+          <Button>Inicio</Button>
         </Link>
 
         <Link to="/Cursos">
-          <button className="linkButton">Cursos</button>
+          <Button>Cursos</Button>
         </Link>
 
         <Link to="/About">
-          <button className="linkButton">Acerca de</button>
+          <Button>Acerca de</Button>
         </Link>
         <Link to="/Contact">
-          <button className="linkButton">Contacto</button>
+          <Button>Contacto</Button>
         </Link>
 
         {user?.email === "jesusa@gmail.com" && (
-          <Link to="/Crud" className="nav-link">
-            <button className="linkButton">Administrador </button>
+          <Link to="/Admin" className="nav-link">
+            <Button>Administrador</Button>
           </Link>
         )}
+
+        
 
         <button className="CerrarSesión" type="button" onClick={handleLogout}>
           Cerrar sesión

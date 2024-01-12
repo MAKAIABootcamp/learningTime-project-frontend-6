@@ -1,10 +1,9 @@
-// CardDonation.jsx
 import React from "react";
 import "./CardDonation.scss";
 import { FaCircleCheck } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-const CardDonation = ({ title, description, items }) => {
+const CardDonation = ({ title, description, price, items }) => {
   return (
     <div className="card">
       <div className="educational-resources">
@@ -13,7 +12,7 @@ const CardDonation = ({ title, description, items }) => {
 
       <div className="amount">
         <div className="amount-text">
-          <p className="amount-P">COL$ 10.000</p>
+          <p className="amount-P">COL$ {price}</p>
           <p className="donation-description">{description}</p>
         </div>
 

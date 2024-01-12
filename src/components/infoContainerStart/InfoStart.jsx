@@ -17,7 +17,10 @@ function InfoStart() {
               trabajo. Aprende como quieras con nuestra aplicación.
             </p>
           </div>
-          <button className="buttonText">Ingesar</button>
+
+          <Link to="/Login">
+            <button className="buttonText">Ingesar</button>
+          </Link>
         </div>
       </div>
     </>

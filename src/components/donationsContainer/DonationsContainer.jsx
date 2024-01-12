@@ -15,6 +15,7 @@ const DonationsContainer = () => {
         "Equipamiento tecnológico",
         "Materiales educativos",
       ],
+      price: 20000,
     },
     {
       title: "Innovación Educativa",
@@ -26,6 +27,7 @@ const DonationsContainer = () => {
         "Capacitaciones",
         "Desarrollo de contenido educativo",
       ],
+      price: 10000,
     },
   ];
 

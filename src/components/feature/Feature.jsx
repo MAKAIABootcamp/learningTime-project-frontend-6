@@ -1,11 +1,9 @@
-// Feature.js
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setActiveText } from "../../store/feature/featureActions";
 import { selectActiveText } from "../../store/feature/featureSlice";
 import "./Feature.scss";
 
-// Importar las imágenes desde la carpeta 'public'
 import imagen1 from "../../../public/Images/Feature-image1.png";
 import imagen2 from "../../../public/Images/Feature-image2.png";
 import imagen3 from "../../../public/Images/Feature-image3.png";

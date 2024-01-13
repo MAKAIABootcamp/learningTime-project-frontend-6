@@ -1,9 +1,9 @@
-.Donations {
+.Courses {
   margin-top: 20px;
   padding: 0 10%;
   display: flex;
   flex-direction: row;
-  .title {
+  .titleCourses {
     color: #029b94;
   }
 
@@ -15,12 +15,12 @@
     display: flex;
     flex-direction: column;
   }
-  .listDonations {
+  .listCourses {
     width: 50%;
 
     padding: 5% 5%;
   }
-  .iconsDonation {
+  .iconsCourse {
     margin-right: 5px;
     width: 30px;
     height: 30px;

@@ -49,7 +49,9 @@ function ContactForm() {
                   <Form.Control as="textarea" rows={3} />
                 </Form.Group>
 
-                <Button type="submit">Submit form</Button>
+                <Button type="submit" className="ButtonContac">
+                  Enviar
+                </Button>
               </Form>
             </div>
           </div>

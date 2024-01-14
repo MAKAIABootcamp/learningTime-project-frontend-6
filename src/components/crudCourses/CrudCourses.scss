@@ -36,17 +36,17 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .Donations {
+  .Courses {
     display: flex;
     flex-direction: column;
 
-    .title {
+    .titleCourses {
       width: 400px;
     }
     .containerForm {
       width: 100%;
     }
-    .listDonations {
+    .listCourses {
       width: 100%;
     }
   }

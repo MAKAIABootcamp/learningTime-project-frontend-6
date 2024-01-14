@@ -15,12 +15,9 @@ const CardDonation = ({ title, description, price, items }) => {
           <p className="amount-P">COL$ {price}</p>
           <p className="donation-description">{description}</p>
         </div>
-
-        <div className="button">
-          <Link to="/About">
-            <button>Donar</button>
-          </Link>
-        </div>
+        <Link to="/About" className="linkCard">
+          <button className="button">Donar</button>
+        </Link>
       </div>
 
       <div className="lists">

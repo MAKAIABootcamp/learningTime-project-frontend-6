@@ -91,7 +91,7 @@ function CrudCourses() {
           </Form.Group>
 
           <Form.Group controlId="formType" className="mb-3">
-            <LuType className="iconsCourse" />
+            <MdOutlineSubtitles className="iconsCourse" />
 
             <Form.Label>Tipo de curso</Form.Label>
             <Form.Control
@@ -103,7 +103,7 @@ function CrudCourses() {
           </Form.Group>
 
           <Form.Group controlId="formTitle" className="mb-3">
-            <MdOutlineSubtitles className="iconsCourse" />
+            <LuType className="iconsCourse" />
             <Form.Label>Título del curso</Form.Label>
             <Form.Control
               type="text"
@@ -178,7 +178,7 @@ function CrudCourses() {
               <div>
                 <span>
                   {" "}
-                  <MdOutlineSubtitles className="iconsCourse" /> Título:
+                  <LuType className="iconsCourse" /> Título:
                 </span>
                 <span>{item.title}</span>
               </div>

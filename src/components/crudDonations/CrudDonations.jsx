@@ -14,7 +14,7 @@ import { MdOutlineSubtitles } from "react-icons/md";
 import { MdOutlineDescription } from "react-icons/md";
 import { MdOutlinePriceChange } from "react-icons/md";
 import { FaListCheck } from "react-icons/fa6";
-import { LuLayoutList } from "react-icons/lu";
+import { LuLayoutList, LuType } from "react-icons/lu";
 
 function CrudDonations() {
   const [id, setId] = useState("");
@@ -87,7 +87,7 @@ function CrudDonations() {
           </Form.Group>
 
           <Form.Group controlId="formTitle" className="mb-3">
-            <MdOutlineSubtitles className="iconsDonation" />
+            <LuType className="iconsDonation" />
             <Form.Label>Título de donación</Form.Label>
             <Form.Control
               type="text"
@@ -157,7 +157,7 @@ function CrudDonations() {
               <div>
                 <span>
                   {" "}
-                  <MdOutlineSubtitles className="iconsDonation" />
+                  <LuType className="iconsDonation" />
                   Título:
                 </span>
                 <span>{item.title}</span>

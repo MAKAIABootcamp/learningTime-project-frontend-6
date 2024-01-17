@@ -9,4 +9,46 @@
   .containerAbout {
     padding: 0 10%;
   }
+
+  .titleAbout {
+    width: 100%;
+    height: 100%;
+    font-family: "Sora";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #029b94;
+    margin-top: 25px;
+    padding: 10px;
+    // border: 4px solid yellow;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .titleHistoriaAbout {
+    width: 100%;
+    height: 100%;
+    font-family: "Sora";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #029b94;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .parrafo {
+    font-size: 17px;
+  }
+  .caption {
+    font-size: 30px;
+  }
+  .containerCursess {
+  }
 }

@@ -4,13 +4,14 @@ import Donation from "../../components/donation/Donation";
 
 import FooterClass from "../../components/FooterComponent/FooterClass";
 import AboutUs from "../../components/aboutUs/AboutUs";
+import ButtonPayment from "../../components/ButtonPayment/ButtonPayment";
 
 function About() {
   return (
     <>
       <Header />
+      <ButtonPayment />
       <AboutUs />
-
       <Donation />
       <FooterClass />
     </>

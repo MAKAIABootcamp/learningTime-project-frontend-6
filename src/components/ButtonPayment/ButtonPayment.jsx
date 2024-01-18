@@ -1,8 +1,14 @@
 import React from "react";
-// import responsePage from "../../Helpers/epayco/response.html";
+import "./ButtonPayment.scss";
+import { useSelector } from "react-redux";
+import { FaShoppingCart } from "react-icons/fa";
 
 const ButtonPayment = () => {
-  const openchekout = (e) => {
+  const donationInfo = useSelector((state) => state.infoDonation.donationType);
+  const { selectedAmount } = useSelector((state) => state.price);
+  const personalInformation = useSelector((state) => state.personalInformation);
+
+  const openCheckout = (e) => {
     e.preventDefault();
     const handler = window.ePayco.checkout.configure({
       key: "acb588487eee9761a8694cbdc7e6054e",
@@ -10,39 +16,31 @@ const ButtonPayment = () => {
     });
 
     const data = {
-      name: "Vestido Mujer Primavera",
-      description: "Vestido Mujer Primavera",
+      name: donationInfo?.title || "Default Title",
+      description: donationInfo?.title || "Default Description",
       invoice: "12345",
       currency: "cop",
-      amount: "119000",
-      tax_base: "100000",
-      tax: "19000",
+      amount: selectedAmount || "119000",
       country: "co",
-      lang: "en",
-      external: "false",
-      extra1: "extra1",
-      extra2: "extra2",
-      extra3: "extra3",
-      confirmation: "http://confirmacion.php",
       response: "ruta de respusta jsx",
-      name_billing: "john doe",
+      name_billing: personalInformation.name || "John Doe",
       address_billing: "Carrera 19 numero 14 91",
       type_doc_billing: "cc",
-      mobilephone_billing: "3050000000",
-      number_doc_billing: "100000000",
-      email_billing: "example@mail.co",
+      mobilephone_billing: personalInformation.phoneNumber || "3050000000",
+      number_doc_billing: personalInformation.idNumber || "100000000",
+      email_billing: personalInformation.email || "example@mail.co",
       acepted: "ruta de aceptacion",
     };
+
     handler.open(data);
   };
+
   return (
     <>
-      <img
-        className="buttonPayment"
-        src="https://multimedia.epayco.co/dashboard/btns/btn2.png"
-        onClick={openchekout}
-      />
-      {/* <button onClick={openCheckout}>Pagar</button> */}
+      <button onClick={openCheckout} className="buttonPayment">
+        <FaShoppingCart className="iconPayment" />
+        Pagar ahora
+      </button>
     </>
   );
 };

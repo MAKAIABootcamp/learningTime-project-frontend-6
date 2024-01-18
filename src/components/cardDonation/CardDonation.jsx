@@ -1,9 +1,21 @@
 import React from "react";
-import "./CardDonation.scss";
+import { useDispatch } from "react-redux";
+import { setDonationType } from "../../store/infoDonation/infoDonationSlice";
 import { FaCircleCheck } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import "./CardDonation.scss";
 
 const CardDonation = ({ title, description, price, items }) => {
+  const dispatch = useDispatch();
+
+  const handleDonationClick = () => {
+    const donationInfo = { title, description };
+    dispatch(setDonationType(donationInfo));
+
+    // Mostrar la información de la donación en la consola
+    console.log("Donación realizada:", donationInfo);
+  };
+
   return (
     <div className="card">
       <div className="educational-resources">
@@ -16,7 +28,9 @@ const CardDonation = ({ title, description, price, items }) => {
           <p className="donation-description">{description}</p>
         </div>
         <Link to="/About" className="linkCard">
-          <button className="button">Donar</button>
+          <button className="button" onClick={handleDonationClick}>
+            Donar
+          </button>
         </Link>
       </div>
 

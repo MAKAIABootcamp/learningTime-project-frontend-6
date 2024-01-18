@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Donation.scss";
 import { IoShieldHalfSharp } from "react-icons/io5";
 import FromDonation from "../fromDonation/FromDonation";
 import SelectPrice from "../selectprice/SelectPrice";
-import donationImage from "../../../public/Images/donation.png";
+
 const Donation = () => {
   return (
     <div className="donate">

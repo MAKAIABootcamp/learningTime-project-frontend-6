@@ -1,17 +1,29 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import "./FromDonation.scss";
+import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setSelectedAmount } from "../../store/price/priceSlice";
+
+import "./FromDonation.scss";
 
 function FromDonation() {
+  const dispatch = useDispatch();
+  const selectedAmountRedux = useSelector(
+    (state) => state.price.selectedAmount
+  );
+
+  const handleCustomAmountChange = (event) => {
+    const inputAmount = event.target.value;
+    dispatch(setSelectedAmount(inputAmount));
+  };
+
   return (
     <Form>
       <Form.Group className="mb-3">
         <Form.Label style={{ color: "#ffffff" }}>Elige otro monto</Form.Label>
         <Form.Control
           type="text"
-          placeholder="$ 0"
+          placeholder={selectedAmountRedux || "$ 0"}
           className="custom-placeholder"
           style={{
             borderRadius: "10px",
@@ -20,6 +32,7 @@ function FromDonation() {
             color: "#ffffff",
             border: "2px solid #ffffff",
           }}
+          onChange={handleCustomAmountChange}
         />
       </Form.Group>
 
@@ -54,7 +67,7 @@ function FromDonation() {
             border: "2px solid #ffffff",
           }}
         >
-          Enviar Donación
+          Donar
         </Button>
       </Link>
     </Form>

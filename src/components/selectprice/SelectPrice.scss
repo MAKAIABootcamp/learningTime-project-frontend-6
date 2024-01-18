@@ -1,3 +1,4 @@
+// SelectPrice.scss
 .donar {
   width: 516px;
   height: 250px;
@@ -41,27 +42,44 @@
 
   .buttons {
     width: 514px;
-    height: 100px; /* Cambiado de auto a un valor fijo */
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
     flex-wrap: wrap;
 
-    .WhiteButton {
+    button {
       color: #029b94;
-      background: #ffffff;
       border: none;
       padding: 10px;
       border-radius: 15px;
-    }
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
 
-    .TealButton {
-      color: #ffffff;
-      background: #029b94;
-      border: none;
-      padding: 10px;
-      border-radius: 15px;
+      &:hover {
+        background: #ffffff;
+        color: #029b94;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &.WhiteButton {
+        background: #ffffff;
+      }
+
+      &.TealButton {
+        background: #029b94;
+        color: #ffffff;
+      }
+
+      &.active {
+        background: #fff;
+        color: #029b94;
+        border: 2px solid #029b94;
+      }
     }
   }
 }

@@ -111,7 +111,7 @@ function CrudDonations() {
           <Form.Group controlId="formItems" className="mb-3">
             <LuLayoutList className="iconsDonation" />
 
-            <Form.Label>Ítems de donación (separados por comas)</Form.Label>
+            <Form.Label>Ítems de donación</Form.Label>
             <Form.Control
               type="text"
               value={items.join(", ")}

@@ -16,9 +16,12 @@ const Footer = () => {
         </div>
 
         <button className="button">
-          <Link to="/login" className="link">
+          <a
+            className="link"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf886yo0MZjTD9RnbheDu5-kKYO6CSAKTMCiehQxrvmEqx4lQ/viewform?embedded=true"
+          >
             Inscríbite
-          </Link>
+          </a>
         </button>
 
         <div className="cont">

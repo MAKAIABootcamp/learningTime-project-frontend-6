@@ -12,7 +12,6 @@ function Start() {
       <NavStart />
       <InfoStart />
       <Feature />
-      <Pricing />
       <Footer />
     </div>
   );

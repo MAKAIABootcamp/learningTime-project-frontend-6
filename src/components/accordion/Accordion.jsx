@@ -17,7 +17,7 @@ function Accordion() {
               aria-expanded="false"
               aria-controls="flush-collapseOne"
             >
-              Accordion Item #1
+              Módulo 1: Fundamentos de la Mentalidad Positiva
             </button>
           </h2>
           <div
@@ -27,9 +27,13 @@ function Accordion() {
             data-bs-parent="#accordionFlushExample"
           >
             <div class="accordion-body">
-              Placeholder content for this accordion, which is intended to
-              demonstrate the <code>.accordion-flush</code> class. This is the
-              first item's accordion body.
+              ✔ Definición y concepto de mentalidad positiva.
+              <br></br>✔ Importancia de la mentalidad positiva en la salud
+              mental y el bienestar.
+              <br></br>✔ Diferencias entre mentalidad positiva y mentalidad
+              negativa.
+              <br></br>✔ Impacto de la mentalidad positiva en la toma de
+              decisiones y la resiliencia.
             </div>
           </div>
         </div>
@@ -43,7 +47,7 @@ function Accordion() {
               aria-expanded="false"
               aria-controls="flush-collapseTwo"
             >
-              Accordion Item #2
+              Módulo 2: Desarrollo de Hábitos Positivos
             </button>
           </h2>
           <div
@@ -53,10 +57,12 @@ function Accordion() {
             data-bs-parent="#accordionFlushExample"
           >
             <div class="accordion-body">
-              Placeholder content for this accordion, which is intended to
-              demonstrate the <code>.accordion-flush</code> class. This is the
-              second item's accordion body. Let's imagine this being filled with
-              some actual content.
+              ✔ Identificación de patrones de pensamiento negativo y cómo
+              cambiarlos.
+              <br></br>✔ Establecimiento de metas realistas y motivadoras.
+              <br></br>✔ Prácticas diarias para fomentar la positividad.
+              <br></br>✔ Creación de un entorno propicio para mantener una
+              mentalidad positiva.
             </div>
           </div>
         </div>
@@ -70,7 +76,7 @@ function Accordion() {
               aria-expanded="false"
               aria-controls="flush-collapseThree"
             >
-              Accordion Item #3
+              Módulo 3: Gestión del Estrés y la Adversidad
             </button>
           </h2>
           <div
@@ -80,12 +86,11 @@ function Accordion() {
             data-bs-parent="#accordionFlushExample"
           >
             <div class="accordion-body">
-              Placeholder content for this accordion, which is intended to
-              demonstrate the <code>.accordion-flush</code> class. This is the
-              third item's accordion body. Nothing more exciting happening here
-              in terms of content, but just filling up the space to make it
-              look, at least at first glance, a bit more representative of how
-              this would look in a real-world application.
+              ✔ Estrategias para manejar el estrés y la presión.
+              <br></br>✔ Afrontamiento positivo ante situaciones adversas.
+              <br></br>✔ Desarrollo de la resiliencia emocional.
+              <br></br>✔ Técnicas de mindfulness y meditación para promover la
+              tranquilidad mental.
             </div>
           </div>
         </div>

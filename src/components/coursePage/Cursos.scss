@@ -1,6 +1,9 @@
 .containerCourses{
   //border: 4px solid blue;
   background-color: #029B94;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 100%;
 }
   //Estilos de las cards...
   .my-component {
@@ -13,7 +16,7 @@
     
   
     .course-info {
-      border: 2px solid #FFFFFF;
+      border: 1px solid #FFFFFF;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -57,15 +60,15 @@
       }
   
       .btn-ingresar2{
-        margin-top: 68px;
+        margin-top: 75px;
       }
   
       .btn-ingresar3{
-        margin-top: 72px;
+        margin-top: 82px;
       }
   
       .btn-ingresar4{
-        margin-top: 20px;
+        margin-top: 10px;
       }
   
       .btn-ingresar5{
@@ -73,7 +76,7 @@
       }
   
       .btn-ingresar6{
-        margin-top: 40px;
+        margin-top: 34px;
       }
   
       .btn-ingresar7{
@@ -81,17 +84,16 @@
       }
   
       .btn-ingresar8{
-        margin-top: 20px;
+        margin-top: -3px;
       }
   
       .btn-ingresar9{
         margin-top: 20px;
       }
       .image {
-        border: 2px solid #FFFFFF;
+        border: 1px solid #FFFFFF;
         width: 320px;
         height: 250px;
-        //border-color: #FFFFFF;
         border-radius: 25px;
       }
     }
@@ -120,7 +122,7 @@
       line-height: 50px;
       letter-spacing: 0em;
       text-align: left;
-      color: #F5F5F5F5;
+      color: white;
       margin-left: 10px;
     }
   }

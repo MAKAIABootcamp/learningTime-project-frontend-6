@@ -40,11 +40,7 @@ const CursosApp = () => {
                         <h2>Estrategias para el Exito Financiero</h2>
                         <img className="image" src={F2} alt="Imagen octavo curso" />
                         <p className="parrafoCurso">
-                            Este curso aborda los principios fundamentales de las finanzas
-                            personales, incluyendo la creación de presupuestos, el ahorro, la
-                            inversión y la planificación para el retiro. Ofrece herramientas
-                            prácticas para gestionar de manera efectiva tus recursos financieros
-                            personales.
+                            Descubre y aprende estrategias clave para alcanzar el éxito financiero en este curso, donde explorarás conceptos fundamentales de ahorro, inversión, presupuesto y planificación financiera. Adquiere las herramientas necesarias para tomar decisiones financieras sólidas y construir un futuro económico próspero.
                         </p>
                         <div className="btn-ingresar8">
                             <button>Ingresar</button>
@@ -136,7 +132,7 @@ const CursosApp = () => {
                         </div>
                     </div>
                     <div className="course-info">
-                        <h2>Introducción a la Mente Positiva</h2>
+                        <h2>Psicologia Positiva <br /><br /></h2>
                         <img className="image" src={VD2} alt="Imagen quinto curso" />
                         <p className="parrafoCurso">
                             La psicología positiva se centra en el estudio de la experiencia humana, como la felicidad, la gratitud y el florecimiento personal. Este curso explora las teorías y prácticas de la psicología positiva para promover el bienestar mental.

@@ -19,7 +19,7 @@ function InfoStart() {
           </div>
 
           <Link to="/Login">
-            <button className="buttonText">Ingesar</button>
+            <button className="buttonText">Ingresar</button>
           </Link>
         </div>
       </div>

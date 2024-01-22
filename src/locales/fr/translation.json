@@ -1,0 +1,43 @@
+
+{
+  "login": "Connexion",
+  "register": "S'inscrire",
+  "language": "Langue",
+  "english": "Anglais",
+  "spanish": "Espagnol",
+  "french": "Français",
+  "italian": "Italien",
+  "hello": "Bonjour, le Monde !",
+  "learnFrom": "Apprenez de",
+  "anywhere": "n'importe où",
+  "fromSofa": "Depuis le canapé, le jardin ou la terrasse de votre maison, ou en chemin vers le travail. Apprenez comme vous le souhaitez avec notre application.",
+  "tenemosAmpliaTrayectoria": "Nous avons une vaste expérience dans ce domaine",
+  "textParrafo": {
+    "0": "Enseignants professionnels dans le domaine",
+    "1": "Votre temps, notre priorité !",
+    "2": "Apprenez à votre rythme"
+  },
+  "textSubparrafo": {
+    "0": "Des enseignants engagés dédiés à l'excellence et à l'innovation éducative pour un apprentissage complet et significatif.",
+    "1": "Nous mettons en œuvre des améliorations pour nous adapter à votre rythme et maximiser l'efficacité.",
+    "2": "Notre approche personnalisée s'adapte à votre emploi du temps et à vos objectifs, facilitant un apprentissage souple et efficace."
+  },
+  "convierteTusSuenos": "Transformez vos rêves en réalité",
+  "noPierdasTiempo": "Ne perdez pas de temps et commencez",
+  "empiezaTuProyecto": "votre projet dès aujourd'hui.",
+  "inscribete": "Inscrivez-vous",
+  "learningTime": "learningTime",
+  "email": "E-mail",
+  "password": "Mot de passe",
+  "rememberMe": "Souviens-toi de moi",
+  "forgotPassword": "Mot de passe oublié ?",
+  "loginWithGoogle": "Se connecter avec Google",
+  "noAccount": "Vous n'avez pas de compte ? Inscrivez-vous",
+  "registerHere": "ici",
+  "username": "Nom d'utilisateur",
+  "confirmPassword": "Confirmer le mot de passe",
+  "selectImage": "Sélectionnez l'image",
+  "createAccount": "Créer un compte",
+  "alreadyHaveAccount": "Vous avez déjà un compte ? Connectez-vous",
+  "loginHere": "ici"
+}

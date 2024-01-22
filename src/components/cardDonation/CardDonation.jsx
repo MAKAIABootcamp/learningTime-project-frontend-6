@@ -11,9 +11,6 @@ const CardDonation = ({ title, description, price, items }) => {
   const handleDonationClick = () => {
     const donationInfo = { title, description };
     dispatch(setDonationType(donationInfo));
-
-    // Mostrar la información de la donación en la consola
-    console.log("Donación realizada:", donationInfo);
   };
 
   return (

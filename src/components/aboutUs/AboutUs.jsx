@@ -1,60 +1,36 @@
 import React from "react";
 import "./AboutUs.scss";
+import about from "../coursePage/images/about.png"
 
 const AboutUs = () => {
   return (
     <div className="About">
       <div className="containerAbout">
-        <div className="titleAbout">
-          <span>¿Quiénes somos?</span>
-        </div>
-        <br />
-
-        <span className="titleHistoriaAbout">HISTORIA</span>
-        <p className="parrafo">
-          Learning time fue creado en el año 2023 en la ciudad de Medellín por
-          iniciativa de un grupo de líderes Makaia la cual se materializó
+        <h3 className="titulo"><br /><b>¿QUIÉNES SOMOS?</b><br /><br /></h3>
+        <h5 className="historia">
+          Learning Time fue creado en el año 2023 en la ciudad de Medellín por
+          iniciativa de un grupo de líderes, la cual se materializó
           inicialmente como una organización de estudios. Dicho propósito busca
           satisfacer las necesidades evidenciadas en los estudiantes, así fue
-          como se formuló un proyecto educativo institucional, con el cuál nació
-          LEARNING TIME, se inicia para ofrecer los siguientes cursos
-        </p>
-        <ul>
-          <div className="containerCursess">
-            <span>SALUD MENTAL</span>
-            <li>Introducción a la mente poositiva</li>
-            <li>Gestión del Estres y bienestar emocional</li>
-            <li>Mindfulness y Reducción de Estrés (MBSR)</li>
-          </div>
-          <span>UNA VIDA SANA</span>
-          <li>Functional Fitness</li>
-          <li>Entrenamiento de Flexibilidad y Movilidad</li>
-          <li>Calistenia</li>
-          <span>FINANZAS</span>
-          <li>Finanzas Personales</li>
-          <li>Estrategias para el Exito Financiero</li>
-          <li>Libertad Financiera</li>
-        </ul>
-        <p>
+          como se formuló un proyecto educativo, con el cuál nació
+          LEARNING TIME.
+          <br />
+          <br />
           Los estudiantes, como principal público, encontrarán en nuestra
-          aplicación un amplio contenido especialmente diseñado para su
-          beneficio. Nuestro enfoque se centra en brindar soluciones para
+          aplicación un amplio y diverso contenido. Nuestro enfoque se centra en brindar soluciones, para
           aquellos que buscan superar obstáculos y mejorar su bienestar en su
           viaje educativo y personal.
-        </p>
-        <p>
-          En el contexto de soluciones similares, existen proyectos que abordan
-          aspectos relacionados con el bienestar emocional y el desarrollo de
-          habilidades en estudiantes.
-        </p>
-        <p>
-          Sin embargo, nuestra propuesta se distingue por su enfoque integral en
+          <br />
+          <br />
+          Sin embargo, nos distinguimos por nuestro enfoque integral en
           la educación, ofreciendo una plataforma que no solo se centra en la
-          salud mental, sino que también abarca áreas clave como el manejo del
-          dinero y otros aspectos fundamentales para el crecimiento holístico de
-          los estudiantes. Esta combinación de contenido diverso y especializado
+          salud mental, sino que también abarca áreas clave como las finanzas y otros aspectos fundamentales para el crecimiento holístico de
+          los estudiantes y comunidad en general. Esta combinación de contenido diverso y especializado
           es lo que diferencia y enriquece nuestra plataforma.
-        </p>
+        </h5>
+      </div>
+      <div className="img">
+        <img className="image" src={about} alt="Img vista about" />
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setActiveText } from "../../store/feature/featureActions";
 import { selectActiveText } from "../../store/feature/featureSlice";
+import { useTranslation } from "react-i18next";
 import "./Feature.scss";
 
 import imagen1 from "../../../public/Images/Feature-image1.png";
@@ -11,6 +12,7 @@ import imagen3 from "../../../public/Images/Feature-image3.png";
 const Feature = () => {
   const dispatch = useDispatch();
   const activeText = useSelector(selectActiveText);
+  const { t } = useTranslation(); // Agrega esta línea
 
   const handleTextClick = (index) => {
     dispatch(setActiveText(index));
@@ -31,8 +33,7 @@ const Feature = () => {
 
   return (
     <div className="features">
-      <h1>Tenemos una amplia trayectoria en este campo</h1>
-
+      <h1>{t("tenemosAmpliaTrayectoria")}</h1> {/* Agrega la traducción aquí */}
       <div className="feature">
         <div className="text-container">
           {[0, 1, 2].map((index) => (
@@ -46,22 +47,14 @@ const Feature = () => {
                   index === activeText ? "active" : "inactive"
                 }`}
               >
-                {index === 0
-                  ? "Docentes profesionales en el área"
-                  : index === 1
-                  ? "¡Tu tiempo nuestra prioridad!"
-                  : "Aprende a tu ritmo"}
+                {t(`textParrafo.${index}`)} {/* Agrega la traducción aquí */}
               </p>
               <p
                 className={`text-subparrafo-${
                   index === activeText ? "active" : "inactive"
                 }`}
               >
-                {index === 0
-                  ? "Docentes comprometidos con la excelencia y la innovación educativa para un aprendizaje integral y significativo."
-                  : index === 1
-                  ? "Implementamos mejoras para ajustarnos a tu ritmo y maximizar la eficacia."
-                  : "Nuestro enfoque personalizado se adapta a tus horarios y objetivos, facilitando un aprendizaje flexible y efectivo."}
+                {t(`textSubparrafo.${index}`)} {/* Agrega la traducción aquí */}
               </p>
             </div>
           ))}

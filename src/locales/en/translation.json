@@ -1,0 +1,40 @@
+{
+    "login": "Login",
+    "register": "Register",
+    "language": "Language",
+    "english": "English",
+    "spanish": "Español",
+    "hello": "Hello, World!",
+    "learnFrom": "Learn from",
+    "anywhere": "anywhere",
+    "fromSofa": "From the sofa, garden, or terrace of your house, or on your way to work. Learn however you want with our application.",
+    "tenemosAmpliaTrayectoria": "We have a wide trajectory in this field",
+    "textParrafo": {
+        "0": "Professional teachers in the field",
+        "1": "Your time, our priority!",
+        "2": "Learn at your own pace"
+    },
+    "textSubparrafo": {
+        "0": "Committed teachers dedicated to excellence and educational innovation for comprehensive and meaningful learning.",
+        "1": "We implement improvements to adjust to your pace and maximize effectiveness.",
+        "2": "Our personalized approach adapts to your schedule and goals, facilitating flexible and effective learning."
+    },
+    "convierteTusSuenos": "Turn your dreams into reality",
+    "noPierdasTiempo": "Don't waste time and start",
+    "empiezaTuProyecto": "your project today.",
+    "inscribete": "Sign up",
+    "learningTime": "learningTime",
+    "email": "Email",
+    "password": "Password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot your password?",
+    "loginWithGoogle": "Login with Google",
+    "noAccount": "Don't have an account? Register",
+    "registerHere": "here",
+    "username": "Username",
+    "confirmPassword": "Confirm Password",
+    "selectImage": "Select Image",
+    "createAccount": "Create Account",
+    "alreadyHaveAccount": "Already have an account? Login",
+    "loginHere": "here"
+}

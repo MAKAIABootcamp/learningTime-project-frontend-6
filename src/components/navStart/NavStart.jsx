@@ -1,34 +1,35 @@
 import React, { useState } from "react";
-import "./NavStart.scss";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { logoutAsync } from "../../store/users/userActions";
+import { useDispatch } from "react-redux";
 import { TbWorld } from "react-icons/tb";
 import Modal from "react-modal";
 import Button from "../Button/Button";
 import { IoClose } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
+import "./NavStart.scss";
 
 const NavStart = () => {
+  const { t, i18n } = useTranslation();
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
-  const dispatch = useDispatch();
-  const { user } = useSelector((store) => store.user);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
-  };
-
-  const handleLogout = () => {
-    dispatch(logoutAsync());
   };
 
   const toggleModal = () => {
     setModalOpen(!isModalOpen);
   };
 
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng).then(() => {
+      toggleModal();
+    });
+  };
+
   return (
     <header className="header">
-      <div className="brand">Learning Time</div>
+      <div className="brand">{t("learningTime")}</div>
 
       <div
         className={`hamburger-menu ${isMenuOpen ? "open" : ""}`}
@@ -39,10 +40,10 @@ const NavStart = () => {
 
       <nav className={`header-nav ${isMenuOpen ? "open" : ""}`}>
         <Link to="/Login">
-          <Button>Login</Button>
+          <Button>{t("login")}</Button>
         </Link>
         <Link to="/Register">
-          <Button>Register</Button>
+          <Button>{t("register")}</Button>
         </Link>
         <TbWorld className="language" onClick={toggleModal} />
       </nav>
@@ -50,17 +51,24 @@ const NavStart = () => {
       <Modal
         isOpen={isModalOpen}
         onRequestClose={toggleModal}
-        contentLabel="Language Modal"
+        contentLabel={t("language")}
         className="Modal"
       >
         <div className="contModal">
           <IoClose className="Close" onClick={toggleModal} />
 
-          <button className="ButtonModal">English</button>
-          <button className="ButtonModal">Deutsch</button>
-          <button className="ButtonModal">Español</button>
-          <button className="ButtonModal">Francia</button>
-          <button className="ButtonModal">Italiano</button>
+          <button className="ButtonModal" onClick={() => changeLanguage("en")}>
+            {t("english")}
+          </button>
+          <button className="ButtonModal" onClick={() => changeLanguage("es")}>
+            {t("spanish")}
+          </button>
+          <button className="ButtonModal" onClick={() => changeLanguage("fr")}>
+            {t("french")}
+          </button>
+          <button className="ButtonModal" onClick={() => changeLanguage("it")}>
+            {t("italian")}
+          </button>
         </div>
       </Modal>
     </header>

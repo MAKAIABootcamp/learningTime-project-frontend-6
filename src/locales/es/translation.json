@@ -1,0 +1,40 @@
+{
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "language": "Idioma",
+    "english": "Inglés",
+    "spanish": "Español",
+    "hello": "¡Hola, Mundo!",
+    "learnFrom": "Aprende desde",
+    "anywhere": "cualquier lugar",
+    "fromSofa": "Desde el sofá, el jardín o la terraza de tu casa, o de camino al trabajo. Aprende como quieras con nuestra aplicación.",
+    "tenemosAmpliaTrayectoria": "Tenemos una amplia trayectoria en este campo",
+    "textParrafo": {
+        "0": "Docentes profesionales en el área",
+        "1": "¡Tu tiempo, nuestra prioridad!",
+        "2": "Aprende a tu ritmo"
+    },
+    "textSubparrafo": {
+        "0": "Docentes comprometidos con la excelencia y la innovación educativa para un aprendizaje integral y significativo.",
+        "1": "Implementamos mejoras para ajustarnos a tu ritmo y maximizar la eficacia.",
+        "2": "Nuestro enfoque personalizado se adapta a tus horarios y objetivos, facilitando un aprendizaje flexible y efectivo."
+    },
+    "convierteTusSuenos": "Convierte tus sueños en realidad",
+    "noPierdasTiempo": "No pierdas tiempo y empieza",
+    "empiezaTuProyecto": "tu proyecto hoy mismo.",
+    "inscribete": "Inscríbete",
+    "learningTime": "learningTime",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "rememberMe": "Recuérdame",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "loginWithGoogle": "Iniciar sesión con Google",
+    "noAccount": "¿No tienes una cuenta? Regístrate",
+    "registerHere": "aquí",
+    "username": "Nombre de usuario",
+    "confirmPassword": "Confirmar Contraseña",
+    "selectImage": "Seleccione Imagen",
+    "createAccount": "Crear cuenta",
+    "alreadyHaveAccount": "¿Ya tienes una cuenta? Iniciar sesión",
+    "loginHere": "aquí"
+}

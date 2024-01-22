@@ -14,7 +14,6 @@ function ContactForm() {
   const handleSavePersonalInformation = (data) => {
     dispatch(savePersonalInformation(data));
   };
-  console.log("Estado Global:", personalInformation);
 
   return (
     <>

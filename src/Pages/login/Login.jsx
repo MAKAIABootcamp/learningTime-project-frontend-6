@@ -11,8 +11,10 @@ import {
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 function Login() {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { isAuthenticate, user, error } = useSelector((store) => store.user);
@@ -49,11 +51,11 @@ function Login() {
     <div className="body">
       <div className="wrapper">
         <form onSubmit={handleSubmit(handleLoginWithEmailAndPassword)}>
-          <h1>Login</h1>
+          <h1>{t("login")}</h1>
           <div className="input-box">
             <input
               type="email"
-              placeholder="email"
+              placeholder={t("email")}
               required
               {...register("email")}
             />
@@ -62,35 +64,32 @@ function Login() {
           <div className="input-box">
             <input
               type="password"
-              placeholder="contraseña"
+              placeholder={t("password")}
               required
               {...register("password")}
             />
             <FaLock className="icono" />
           </div>
-
           <div className="remembre-forgot">
             <label htmlFor="">
               <input type="checkbox" />
-              recuérdame
+              {t("rememberMe")}
             </label>
 
-            <Link to="/login">Has olvidado tu contraseña</Link>
+            <Link to="/login">{t("forgotPassword")}</Link>
           </div>
           <div className="button">
-            <button type="submit">Login</button>
+            <button type="submit">{t("login")}</button>
           </div>
           <br />
           <div className="button">
-            <button type="submit" onClick={() => handleLogin()}>
-              Entrar con google
+            <button type="button" onClick={() => handleLogin()}>
+              {t("loginWithGoogle")}
             </button>
           </div>
-
           <div className="Register-link">
             <p>
-              No tienes una cuenta registrate?
-              <Link to="/Register">aquí</Link>
+              {t("noAccount")} <Link to="/Register">{t("registerHere")}</Link>
             </p>
           </div>
         </form>

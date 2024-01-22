@@ -1,31 +1,30 @@
 import React from "react";
 import "./Footer.scss";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaFacebookSquare, FaYoutube } from "react-icons/fa";
+import { FaWhatsapp, FaFacebookSquare, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation(); // Agrega esta línea
+
   return (
     <div className="footer">
       <div className="containerFooter">
         <div className="text">
-          <div className="texto1">Convierte tus sueños en realidad</div>
+          <div className="texto1">{t("convierteTusSuenos")}</div>
           <div className="texto2">
-            No pierdas tiempo y empieza <br /> tu proyecto hoy mismo.
+            {t("noPierdasTiempo")} <br /> {t("empiezaTuProyecto")}
           </div>
         </div>
 
         <button className="button">
-          <a
-            className="link"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSf886yo0MZjTD9RnbheDu5-kKYO6CSAKTMCiehQxrvmEqx4lQ/viewform?embedded=true"
-          >
-            Inscríbite
-          </a>
+          <Link className="link" to="/Login">
+            <button className="button">{t("inscribete")}</button>
+          </Link>
         </button>
 
         <div className="cont">
-          <div className="texto">learningTime</div>
+          <div className="texto">{t("learningTime")}</div>
           <div className="redes">
             <Link to="/login">
               <FaWhatsapp className="redes-icon" />

@@ -1,15 +1,16 @@
 import React from "react";
-import { FaUser } from "react-icons/fa";
+import { FaUser, FaLock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { FaLock } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { FaImage } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import uploadFile from "../../services/fileUpload";
 import { createAnAccountAsync } from "../../store/users/userActions";
+import { useTranslation } from "react-i18next";
 
 function Register() {
+  const { t } = useTranslation();
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
 
@@ -25,16 +26,17 @@ function Register() {
     };
     dispatch(createAnAccountAsync(newUser));
   };
+
   return (
     <div className="body">
       <div className="wrapper">
         <form onSubmit={handleSubmit(handleRegister)}>
-          <h1>Register</h1>
+          <h1>{t("register")}</h1> {/* Agrega la traducción aquí */}
           <div className="input-box">
             <input
               className="registerInput"
               type="text"
-              placeholder="Nombre de usuario"
+              placeholder={t("username")}
               {...register("name")}
             />
             <FaUser className="icono" />
@@ -42,7 +44,7 @@ function Register() {
           <div className="input-box">
             <input
               type="email"
-              placeholder="email"
+              placeholder={t("email")}
               required
               {...register("email")}
             />
@@ -51,7 +53,7 @@ function Register() {
           <div className="input-box">
             <input
               type="password"
-              placeholder="contraseña"
+              placeholder={t("password")}
               required
               {...register("password")}
             />
@@ -60,13 +62,12 @@ function Register() {
           <div className="input-box">
             <input
               type="password"
-              placeholder="confirmar Contraseña"
+              placeholder={t("confirmPassword")}
               required
               {...register("confirmedPassword")}
             />
             <FaLock className="icono" />
           </div>
-
           <div className="input-box-file">
             <input
               className="input-file"
@@ -75,18 +76,17 @@ function Register() {
               {...register("image")}
             />
             <label htmlFor="fileInput" className="label-file">
-              <span>Seleccione Imagen</span>
+              <span>{t("selectImage")}</span>
               <FaImage className="icono" />
             </label>
           </div>
-
           <div className="button">
-            <button type="submit">Crear cuenta</button>
+            <button type="submit">{t("createAccount")}</button>
           </div>
           <div className="Register-link">
             <p>
-              Si ya tienes cuenta registrada iniciar sesión,
-              <Link to="/login">aquí</Link>
+              {t("alreadyHaveAccount")}{" "}
+              <Link to="/login">{t("loginHere")}</Link>
             </p>
           </div>
         </form>

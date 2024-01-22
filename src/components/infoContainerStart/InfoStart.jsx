@@ -1,25 +1,26 @@
 import React from "react";
 import "./InfoStart.scss";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 function InfoStart() {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="contStart">
         <div className="contText">
           <div className="text">
             <p>
-              Aprende desde <p className="p-curso">cualquier lugar</p>
+              {t("learnFrom")} <p className="p-curso">{t("anywhere")}</p>
             </p>
           </div>
           <div className="contDescription">
-            <p className="description">
-              Desde el sofá, el jardín o la terraza de tu casa, o de camino al
-              trabajo. Aprende como quieras con nuestra aplicación.
-            </p>
+            <p className="description">{t("fromSofa")}</p>
           </div>
 
           <Link to="/Login">
-            <button className="buttonText">Ingesar</button>
+            <button className="buttonText">{t("login")}</button>
           </Link>
         </div>
       </div>

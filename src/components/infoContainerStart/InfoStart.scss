@@ -44,13 +44,14 @@
     width: 100%;
   }
   .buttonText {
-    width: 30%;
+    width: 35%;
     background: #029b94;
     border: none;
 
     padding: 10px 20px;
     color: #fff;
     border-radius: 15px;
+
     &:hover {
       background-color: #fff;
       color: #009a93;
@@ -71,6 +72,10 @@
     }
     .text {
       height: 150px;
+    }
+
+    .buttonText {
+      width: 40%;
     }
   }
 }

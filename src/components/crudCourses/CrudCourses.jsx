@@ -198,6 +198,20 @@ function CrudCourses() {
               </div>
               <div>
                 <span>
+                  <MdOutlineDescription className="iconsCourse" />
+                  Descripción:
+                </span>
+                <span>{item.description}</span>
+              </div>
+              <div>
+                <span>
+                  <MdOutlinePriceChange className="iconsCourse" />
+                  Precio:
+                </span>
+                <span>${item.price}</span>
+              </div>
+              <div>
+                <span>
                   <MdOutlineSubtitles className="iconsCourse" />
                   Categoría:
                 </span>

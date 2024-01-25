@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../coursePage/Cursos.scss";
 import { Link } from "react-router-dom";
 import SM3 from "./images/SM3.png";
@@ -14,6 +14,9 @@ import c9 from "./images/curso9.png";
 import { BsSearch } from "react-icons/bs";
 import { FaFilter } from "react-icons/fa";
 import { FaGraduationCap } from "react-icons/fa";
+
+import { getCourses } from "../../store/course/courseActions";
+import { useDispatch, useSelector } from "react-redux";
 
 const dataCursos = [
   {
@@ -101,6 +104,13 @@ const CursosApp = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterCategory, setFilterCategory] = useState(null);
   const [filterCertification, setFilterCertification] = useState(null);
+  const dispatch = useDispatch();
+  const courses = useSelector((state) => state.course.courses);
+
+  useEffect(() => {
+    dispatch(getCourses());
+    console.log(courses);
+  }, [dispatch]);
 
   const filteredCursos = dataCursos
     .filter(

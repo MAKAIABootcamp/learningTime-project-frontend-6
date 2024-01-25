@@ -16,6 +16,8 @@ import { auth } from "../firebase/firebaseConfig";
 
 import Admin from "../Pages/admin/Admin";
 import Start from "../Pages/inicio/Start";
+import Ejemplo from "../components/ejemplo/ejemplo";
+import PaymentAceptacion from "../components/paymentAceptacion/PaymentAceptacion";
 
 function AppRouter() {
   const { isAuthenticate, user } = useSelector((store) => store.user);
@@ -49,6 +51,7 @@ function AppRouter() {
             <Route path="Start" element={<Start />} />
             <Route path="Register" element={<Register />} />
             <Route path="Login" element={<Login />} />
+            <Route path="ejemplo" element={<Ejemplo />} />
           </Route>
           <Route element={<PrivatedRoutes isAuthenticate={isAuthenticate} />}>
             <Route path="Home" element={<Home />} />
@@ -57,6 +60,7 @@ function AppRouter() {
             <Route path="About" element={<About />} />
             <Route path="Contact" element={<Contact />} />
             <Route path="Admin" element={<Admin />} />
+            <Route path="PaymentAceptacion" element={<PaymentAceptacion />} />
 
             <Route index element={<Home />} />
             {}

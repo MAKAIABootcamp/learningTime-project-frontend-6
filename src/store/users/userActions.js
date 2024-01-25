@@ -89,7 +89,7 @@ export const loginWithEmailAndPassword =
         setUser({
           email: user.email,
           id: user.uid,
-          name: user.displayName,
+          displayName: user.displayName,
           photoURL: user.photoURL,
           accessToken: user.accessToken,
         })

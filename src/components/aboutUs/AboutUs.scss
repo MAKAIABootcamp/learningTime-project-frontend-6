@@ -13,7 +13,6 @@
 .titulo {
   //border:  2px solid green;
   width: 100%;
-  margin-left: 25px;
 }
 .historia {
   margin-left: -90px;
@@ -25,4 +24,22 @@
   margin-left: 50px;
   margin-right: 30px;
   margin-top: 30px;
+}
+@media screen and (max-width: 767px) {
+  /* Oculta las imágenes en dispositivos más pequeños */
+  .img {
+    display: none;
+  }
+  .titulo {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .historia {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .containerAbout {
+    padding: 0;
+    width: 100%;
+  }
 }

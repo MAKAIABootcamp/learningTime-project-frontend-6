@@ -18,7 +18,7 @@ const ButtonPayment = () => {
     const data = {
       name: donationInfo?.title || "Default Title",
       description: donationInfo?.title || "Default Description",
-      invoice: "12345",
+      invoice: "1234567",
       currency: "cop",
       amount: selectedAmount || "119000",
       country: "co",
@@ -29,7 +29,6 @@ const ButtonPayment = () => {
       mobilephone_billing: personalInformation.phoneNumber || "3050000000",
       number_doc_billing: personalInformation.idNumber || "100000000",
       email_billing: personalInformation.email || "example@mail.co",
-      acepted: "ruta de aceptacion",
     };
 
     handler.open(data);

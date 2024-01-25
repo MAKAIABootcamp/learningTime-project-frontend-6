@@ -11,6 +11,10 @@ import F1 from "./images/F1.png";
 import F2 from "./images/F2.png";
 import c9 from "./images/curso9.png";
 
+import { BsSearch } from "react-icons/bs";
+import { FaFilter } from "react-icons/fa";
+import { FaGraduationCap } from "react-icons/fa";
+
 const dataCursos = [
   {
     categoria: "Finanzas",
@@ -21,6 +25,7 @@ const dataCursos = [
         descripcion:
           "Este curso aborda los principios fundamentales de las finanzas personales, incluyendo la creación de presupuestos, el ahorro, la inversión y la planificación para el retiro. Ofrece herramientas prácticas para gestionar de manera efectiva tus recursos financieros personales.",
         link: "/curso1",
+        certificacion: false,
       },
       {
         titulo: "Estrategias para el Exito Financiero",
@@ -28,6 +33,7 @@ const dataCursos = [
         descripcion:
           "Este curso aborda los principios fundamentales de las finanzas personales, incluyendo la creación de presupuestos, el ahorro, la inversión y la planificación para el retiro. Ofrece herramientas prácticas para gestionar de manera efectiva tus recursos financieros personales.",
         link: "/curso2",
+        certificacion: true,
       },
       {
         titulo: "Libertad Financiera",
@@ -35,6 +41,7 @@ const dataCursos = [
         descripcion:
           "Este curso se centra en el concepto de libertad financiera y proporciona estrategias para alcanzar metas financieras significativas. Cubre temas como el ahorro, la inversión, la reducción de deudas y la creación de un plan financiero personalizado.",
         link: "/curso3",
+        certificacion: true,
       },
     ],
   },
@@ -46,7 +53,8 @@ const dataCursos = [
         imagen: SM1,
         descripcion:
           "La psicología positiva se centra en el estudio de aspectos positivos de la experiencia humana, como la felicidad, la gratitud y el florecimiento personal. Este curso explora las teorías y prácticas de la psicología positiva para promover el bienestar mental.",
-        link: "/curso4",
+        link: "/Class",
+        certificacion: true,
       },
       {
         titulo: "Mindfulness y Reducción de Estres",
@@ -54,6 +62,7 @@ const dataCursos = [
         descripcion:
           "La atención plena, conocida como mindfulness en inglés, es una práctica que se centra en la conciencia plena y la atención al momento presente. El concepto tiene sus raíces en antiguas tradiciones contemplativas, como el budismo, pero en la actualidad se ha popularizado y adaptado en contextos secularizados y enfoques terapéuticos.",
         link: "/curso5",
+        certificacion: true,
       },
       {
         titulo: "Gestión del Estrés y Bienestar Emocional",
@@ -61,6 +70,7 @@ const dataCursos = [
         descripcion:
           "Este curso se enfoca en estrategias prácticas para manejar el estrés y mejorar el bienestar emocional. Examina técnicas de afrontamiento, manejo del tiempo y prácticas que fomentan la resiliencia en situaciones estresantes.",
         link: "/curso6",
+        certificacion: false,
       },
     ],
   },
@@ -73,12 +83,7 @@ const dataCursos = [
         descripcion:
           "Este curso se centra en el fitness funcional, que implica ejercicios diseñados para mejorar la capacidad del cuerpo para realizar actividades diarias de manera más efectiva. Puede incluir entrenamiento con peso corporal, ejercicios con equipamiento funcional y la incorporación de movimientos que imitan acciones cotidianas.",
         link: "/curso7",
-      },
-      {
-        titulo: "Introducción a la Mente Positiva",
-        descripcion:
-          "La psicología positiva se centra en el estudio de la experiencia humana, como la felicidad, la gratitud y el florecimiento personal. Este curso explora las teorías y prácticas de la psicología positiva para promover el bienestar mental.",
-        link: "/curso8",
+        certificacion: true,
       },
       {
         titulo: "Calistenia",
@@ -86,6 +91,7 @@ const dataCursos = [
         descripcion:
           "Este curso se enfoca en el entrenamiento de peso corporal, también conocido como calistenia. Aprenderás técnicas para desarrollar fuerza, resistencia y flexibilidad utilizando principalmente tu propio peso como resistencia. El curso puede incluir ejercicios como flexiones, dominadas, fondos y progresiones avanzadas.",
         link: "/curso9",
+        certificacion: false,
       },
     ],
   },
@@ -94,6 +100,7 @@ const dataCursos = [
 const CursosApp = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterCategory, setFilterCategory] = useState(null);
+  const [filterCertification, setFilterCertification] = useState(null);
 
   const filteredCursos = dataCursos
     .filter(
@@ -101,30 +108,56 @@ const CursosApp = () => {
     )
     .map((categoria) => ({
       ...categoria,
-      cursos: categoria.cursos.filter((curso) =>
-        curso.titulo.toLowerCase().includes(searchTerm.toLowerCase())
+      cursos: categoria.cursos.filter(
+        (curso) =>
+          curso.titulo.toLowerCase().includes(searchTerm.toLowerCase()) &&
+          (filterCertification === null ||
+            curso.certificacion === (filterCertification === "true"))
       ),
     }));
 
   return (
     <>
       <section className="containerCourses">
-        <div className="search-and-filters">
-          <input
-            type="text"
-            placeholder="Buscar curso..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <select
-            value={filterCategory || ""}
-            onChange={(e) => setFilterCategory(e.target.value || null)}
-          >
-            <option value="">Todos</option>
-            <option value="Finanzas">Finanzas</option>
-            <option value="Salud mental">Salud mental</option>
-            <option value="Vida Sana">Vida Sana</option>
-          </select>
+        <div className="containerfilters">
+          <div className="search-container">
+            <input
+              className="search"
+              type="text"
+              placeholder="Buscar curso..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+
+            <BsSearch className="search-icon" />
+          </div>
+          <div className="containerSelectCategory">
+            <FaFilter className="Category-icon" />
+
+            <select
+              value={filterCategory || ""}
+              onChange={(e) => setFilterCategory(e.target.value || null)}
+              className="SelectCategory"
+            >
+              <option value="">Filter</option>
+              <option value="Finanzas">Finanzas</option>
+              <option value="Salud mental">Salud mental</option>
+              <option value="Vida Sana">Vida Sana</option>
+            </select>
+          </div>
+          <div className="containerSelectCertification">
+            <FaGraduationCap className="Certification-icon" />
+
+            <select
+              value={filterCertification || ""}
+              onChange={(e) => setFilterCertification(e.target.value || null)}
+              className="SelectCertification"
+            >
+              <option value="">Certificación</option>
+              <option value="true">Con Certificación</option>
+              <option value="false">Sin Certificación</option>
+            </select>
+          </div>
         </div>
         {filteredCursos.map((categoria, index) => (
           <section key={index} className="my-component">

@@ -28,9 +28,7 @@ $primary-color: #029b94;
       height: 30px;
       display: flex;
       flex-direction: row;
-      margin-left: 25px;
 
-      gap: 10px;
       .icon {
         width: 40px;
         height: 40px;
@@ -49,6 +47,9 @@ $primary-color: #029b94;
         font-size: 25px;
         color: #fff;
         font-family: "Sora", sans-serif;
+      }
+      .parrafo {
+        margin-left: 5px;
       }
     }
   }

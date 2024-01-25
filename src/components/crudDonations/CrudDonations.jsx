@@ -81,29 +81,29 @@ function CrudDonations() {
     <div className="Donations">
       <div className="containerForm" style={{ margin: "20px" }}>
         <Form>
-          <h1 className="title">CRUD Donaciones</h1>
+          <h1 className="title">Gestionar donaciones</h1>
           <Form.Group controlId="formId" className="mb-3">
             <Form.Control type="text" readOnly hidden value={id} />
           </Form.Group>
 
           <Form.Group controlId="formTitle" className="mb-3">
             <LuType className="iconsDonation" />
-            <Form.Label>Título de donación</Form.Label>
+            <Form.Label>Título</Form.Label>
             <Form.Control
               type="text"
               value={title}
-              placeholder="Ingrese el título de la donación"
+              placeholder="Ingrese el título"
               onChange={(e) => setTitle(e.target.value)}
             />
           </Form.Group>
 
           <Form.Group controlId="formDescription" className="mb-3">
             <MdOutlineDescription className="iconsDonation" />
-            <Form.Label>Descripción de donación</Form.Label>
+            <Form.Label>Descripción</Form.Label>
             <Form.Control
               type="text"
               value={description}
-              placeholder="Ingrese la descripción de la donación"
+              placeholder="Ingrese la descripción"
               onChange={(e) => setDescription(e.target.value)}
             />
           </Form.Group>
@@ -111,11 +111,11 @@ function CrudDonations() {
           <Form.Group controlId="formItems" className="mb-3">
             <LuLayoutList className="iconsDonation" />
 
-            <Form.Label>Ítems de donación</Form.Label>
+            <Form.Label>Ítems</Form.Label>
             <Form.Control
               type="text"
               value={items.join(", ")}
-              placeholder="Ingrese los ítems de la donación"
+              placeholder="Ingrese los ítems"
               onChange={(e) =>
                 setItems(e.target.value.split(", ").map((item) => item.trim()))
               }
@@ -124,11 +124,11 @@ function CrudDonations() {
 
           <Form.Group controlId="formPrice" className="mb-3">
             <MdOutlinePriceChange className="iconsDonation" />
-            <Form.Label>Precio de donación</Form.Label>
+            <Form.Label>Precio</Form.Label>
             <Form.Control
               type="number"
               value={price}
-              placeholder="Ingrese el precio de la donación"
+              placeholder="Ingrese el precio"
               onChange={(e) => setPrice(e.target.value)}
             />
           </Form.Group>
@@ -138,7 +138,7 @@ function CrudDonations() {
             onClick={(e) => handleSubmit(e)}
             className="ms-2"
           >
-            Enviar donación
+            Agregar
           </Button>
           <Button
             variant="secondary"

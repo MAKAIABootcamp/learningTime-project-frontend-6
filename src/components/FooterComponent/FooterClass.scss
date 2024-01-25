@@ -7,10 +7,14 @@ $column-gap: 100px;
   align-items: center;
   gap: 26px;
   flex: 1 0 0;
-  align-self: stretch;
+  align-self: center;
   background: $footer-background;
   padding: 0, 10%;
-  width: 100%;
+
+  justify-content: center;
+  .enlace {
+    text-decoration: none;
+  }
 
   .links {
     width: 100%;
@@ -21,7 +25,7 @@ $column-gap: 100px;
     align-items: center;
     gap: $column-gap;
     flex: 1 0 0;
-    align-self: stretch;
+    justify-content: center;
 
     .column {
       width: 100%;
@@ -39,6 +43,22 @@ $column-gap: 100px;
         font-weight: 600;
         line-height: normal;
       }
+      .texto-NuestrasRedes {
+        color: #000;
+        font-family: "Sora", sans-serif;
+        font-size: 26px;
+        font-weight: 600;
+        line-height: normal;
+        margin-top: -55px;
+      }
+      .texto-Contactos {
+        color: #000;
+        font-family: "Sora", sans-serif;
+        font-size: 26px;
+        font-weight: 600;
+        line-height: normal;
+        margin-top: -30px;
+      }
 
       .link {
         width: 100%;
@@ -49,7 +69,7 @@ $column-gap: 100px;
         gap: 24px;
         .iconClass {
           color: #000;
-          font-size: 28px;
+          font-size: 40px;
         }
 
         span {
@@ -83,13 +103,22 @@ $column-gap: 100px;
       display: flex;
       flex-direction: column;
       padding: 0;
+
+      height: 100%;
+
       .column {
         width: 100%;
         display: flex;
         align-items: center;
+        .texto-Contactos {
+          margin-top: -100px;
+        }
         .link {
           width: 100%;
           justify-content: center;
+          .texto-NuestrasRedes {
+            margin-top: 0px;
+          }
         }
       }
     }

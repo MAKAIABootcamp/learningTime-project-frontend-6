@@ -15,13 +15,15 @@ import { MdOutlinePriceChange } from "react-icons/md";
 import "./CrudCourses.scss";
 import { LuType } from "react-icons/lu";
 import { FaImage } from "react-icons/fa";
+
 function CrudCourses() {
   const [id, setId] = useState("");
-  const [type, setType] = useState("");
   const [title, setTitle] = useState("");
+  const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState(0);
+  const [certification, setCertification] = useState(true);
 
   const dispatch = useDispatch();
   const { courses } = useSelector((store) => store.course);
@@ -33,11 +35,12 @@ function CrudCourses() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const course = {
-      type,
       title,
+      category,
       image,
       description,
       price,
+      certification,
     };
     dispatch(createCourse(course));
 
@@ -48,11 +51,12 @@ function CrudCourses() {
     e.preventDefault();
     const course = {
       id,
-      type,
       title,
+      category,
       image,
       description,
       price,
+      certification,
     };
     dispatch(updateCourse(course));
 
@@ -64,53 +68,58 @@ function CrudCourses() {
   };
 
   const handleEdit = (item) => {
-    setType(item.type);
     setTitle(item.title);
+    setCategory(item.category);
     setImage(item.image);
     setDescription(item.description);
     setPrice(item.price);
+    setCertification(item.certification);
     setId(item.id);
   };
 
   const clearFields = () => {
     setId("");
-    setType("");
     setTitle("");
+    setCategory("");
     setImage("");
     setDescription("");
     setPrice(0);
+    setCertification(true);
   };
 
   return (
     <div className="Courses">
       <div className="containerForm" style={{ margin: "20px" }}>
         <Form>
-          <h1 className="titleCourses">CRUD Cursos</h1>
+          <h1 className="titleCourses">Gestionar Cursos</h1>
           <Form.Group controlId="formId" className="mb-3">
             <Form.Control type="text" readOnly hidden value={id} />
           </Form.Group>
 
-          <Form.Group controlId="formType" className="mb-3">
-            <MdOutlineSubtitles className="iconsCourse" />
-
-            <Form.Label>Tipo de curso</Form.Label>
-            <Form.Control
-              type="text"
-              value={type}
-              placeholder="Ingrese el tipo de curso"
-              onChange={(e) => setType(e.target.value)}
-            />
-          </Form.Group>
-
           <Form.Group controlId="formTitle" className="mb-3">
             <LuType className="iconsCourse" />
-            <Form.Label>Título del curso</Form.Label>
+            <Form.Label>Título</Form.Label>
             <Form.Control
               type="text"
               value={title}
-              placeholder="Ingrese el título del curso"
+              placeholder="Ingrese el título"
               onChange={(e) => setTitle(e.target.value)}
             />
+          </Form.Group>
+
+          <Form.Group controlId="formCategory" className="mb-3">
+            <MdOutlineSubtitles className="iconsCourse" />
+            <Form.Label>Categoría</Form.Label>
+            <Form.Control
+              as="select"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              <option value="">Seleccionar Categoría</option>
+              <option value="Finanzas">Finanzas</option>
+              <option value="Salud mental">Salud mental</option>
+              <option value="Vida Sana">Vida Sana</option>
+            </Form.Control>
           </Form.Group>
 
           <Form.Group controlId="formImage" className="mb-3">
@@ -126,24 +135,37 @@ function CrudCourses() {
 
           <Form.Group controlId="formDescription" className="mb-3">
             <MdOutlineDescription className="iconsCourse" />
-            <Form.Label>Descripción del curso</Form.Label>
+            <Form.Label>Descripción</Form.Label>
             <Form.Control
               type="text"
               value={description}
-              placeholder="Ingrese la descripción del curso"
+              placeholder="Ingrese la descripción"
               onChange={(e) => setDescription(e.target.value)}
             />
           </Form.Group>
 
           <Form.Group controlId="formPrice" className="mb-3">
             <MdOutlinePriceChange className="iconsCourse" />
-            <Form.Label>Precio del curso</Form.Label>
+            <Form.Label>Precio</Form.Label>
             <Form.Control
               type="number"
               value={price}
-              placeholder="Ingrese el precio del curso"
+              placeholder="Ingrese el precio"
               onChange={(e) => setPrice(e.target.value)}
             />
+          </Form.Group>
+
+          <Form.Group controlId="formCertification" className="mb-3">
+            <MdOutlineSubtitles className="iconsCourse" />
+            <Form.Label>Certificación</Form.Label>
+            <Form.Control
+              as="select"
+              value={certification}
+              onChange={(e) => setCertification(e.target.value === "true")}
+            >
+              <option value="true">Con Certificación</option>
+              <option value="false">Sin Certificación</option>
+            </Form.Control>
           </Form.Group>
 
           <Button
@@ -151,7 +173,7 @@ function CrudCourses() {
             onClick={(e) => handleSubmit(e)}
             className="ms-2"
           >
-            Enviar curso
+            Agregar
           </Button>
           <Button
             variant="secondary"
@@ -169,40 +191,30 @@ function CrudCourses() {
             <ListGroup.Item key={item.id} className="mb-3">
               <div>
                 <span>
-                  {" "}
-                  <MdOutlineSubtitles className="iconsCourse" />
-                  Tipo:
-                </span>
-                <span>{item.type}</span>
-              </div>
-              <div>
-                <span>
-                  {" "}
-                  <LuType className="iconsCourse" /> Título:
+                  <LuType className="iconsCourse" />
+                  Título:
                 </span>
                 <span>{item.title}</span>
               </div>
               <div>
                 <span>
-                  <FaImage className="iconsCourse" />
-                  Imagen:
+                  <MdOutlineSubtitles className="iconsCourse" />
+                  Categoría:
                 </span>
-                <span>{item.image}</span>
+                <span>{item.category}</span>
               </div>
               <div>
                 <span>
-                  {" "}
-                  <MdOutlineDescription className="iconsCourse" /> Descripción:
+                  <MdOutlineSubtitles className="iconsCourse" />
+                  Certificación:
                 </span>
-                <span>{item.description}</span>
-              </div>
-              <div>
                 <span>
-                  <MdOutlinePriceChange className="iconsCourse" />
-                  Precio:
+                  {item.certification
+                    ? "Con Certificación"
+                    : "Sin Certificación"}
                 </span>
-                <span>${item.price}</span>
               </div>
+              {/* ... Otros campos del curso */}
               <Button
                 variant="warning"
                 onClick={() => handleEdit(item)}

@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 <p align="center">
-<img align="center" width="400px" src="https://res.cloudinary.com/dwevhpoby/image/upload/v1706152639/xoipdctqoumpk71syxgg.jpg">
+<img align="center" width="400px" src="https://res.cloudinary.com/dwevhpoby/image/upload/v1706200639/imagenes/nmvp90pwvvnciqrfomm4.png">
 </p>
 ¡Descubre Learning Time, tu aliado integral para el crecimiento personal y académico! Nuestra aplicación, nacida en Medellín en 2023, ofrece contenido diverso y especializado. Superamos obstáculos y mejoramos el bienestar de los estudiantes, abordando no solo la educación académica, sino también la salud mental y las finanzas. Únete a nosotros en este emocionante viaje de aprendizaje donde enriquecemos cada faceta de tu vida estudiantil y personal. ¡Explora Learning Time hoy!
 

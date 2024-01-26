@@ -60,7 +60,7 @@ El `pages/api` se asigna a `/api/*`. Los archivos de este directorio se tratan c
 
 # Despliegue 
 
-https://tattion.vercel.app
+https://learningtime-project-frontend.web.app/
 
 # Contribución
 ¡Agradecemos las contribuciones a LearningTime! Si quieres contribuir al proyecto, sigue estos pasos:

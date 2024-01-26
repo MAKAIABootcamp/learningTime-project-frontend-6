@@ -18,7 +18,7 @@ const ButtonPayment = () => {
     const data = {
       name: donationInfo?.title || "Default Title",
       description: donationInfo?.title || "Default Description",
-      invoice: "1234567",
+      invoice: "12345678",
       currency: "cop",
       amount: selectedAmount || "119000",
       country: "co",

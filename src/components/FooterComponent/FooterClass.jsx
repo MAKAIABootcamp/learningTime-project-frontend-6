@@ -40,7 +40,7 @@ const FooterClass = () => {
         <div className="column">
           <div className="texto-Contactos">Contactos</div>
           <div className="link">
-            <span>Dirección cll 1A # BC</span>
+            <span>Dirección calle 1A # BC</span>
           </div>
           <div className="link">
             <span>+57 315 2804912</span>

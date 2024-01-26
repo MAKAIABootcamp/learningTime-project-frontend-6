@@ -37,11 +37,11 @@ yarn dev
 # or
 npm dev
 ```
-Abre el siguiente enlace [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
+Abre el siguiente enlace [http://localhost:5174/](http://localhost:5174/) en tu navegador para ver el resultado.
 
 Puedes empezar a editar la página modificando `pages/index.js`. La página se actualiza automáticamente a medida que editas el archivo.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) se puede acceder en [http://localhost:3000/api/hello](http://localhost:3000/api/hello). Este punto final puede editarse en `pages/api/hello.js`.
+[API routes](https://nextjs.org/docs/api-routes/introduction) se puede acceder en [http://localhost:5174/api/hello](http://localhost:5174/api/hello). Este punto final puede editarse en `pages/api/hello.js`.
 
 El `pages/api` se asigna a `/api/*`. Los archivos de este directorio se tratan como [API routes](https://nextjs.org/docs/api-routes/introduction) en lugar de páginas React.
 
